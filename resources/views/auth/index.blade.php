@@ -11,7 +11,7 @@
                 <form class="login100-form validate-form" action={{ route('login-proses') }} method="post">
                     @csrf
                     <span class="login100-form-logo">
-                        <img src={{ url('/images/logo-bem.png') }} width="80%">
+                        <img src={{ url('/images/logobem.png') }} width="80%">
                     </span>
 
                     <span class="login100-form-title p-b-34 p-t-27">

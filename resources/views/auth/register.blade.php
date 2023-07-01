@@ -7,8 +7,7 @@
                 <form class="login100-form validate-form" action={{ route('register-proses') }} method="post">
                     @csrf
                     <span class="login100-form-logo">
-                        <img src={{ url('/images/logo.png') }}>
-
+                        <img src={{ url('/images/logobem.png') }} width="80%">
                     </span>
 
                     <span class="login100-form-title p-b-34 p-t-27">

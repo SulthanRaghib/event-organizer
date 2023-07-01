@@ -17,9 +17,9 @@
     <!--    Favicons-->
     <!-- ===============================================-->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ url('frontend/assets/img/favicons/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ url('/images/logo-bem.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ url('/images/logo-bem.png') }}">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ url('/images/logo-bem.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url('/images/logobem.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url('/images/logobem.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url('/images/logobem.png') }}">
     <link rel="manifest" href="{{ url('frontend/assets/img/favicons/manifest.json') }}">
     <meta name="msapplication-TileImage" content="{{ url('frontend/assets/img/favicons/mstile-150x150.png') }}">
     <meta name="theme-color" content="#ffffff">
@@ -44,8 +44,8 @@
     <main class="main" id="top">
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" data-navbar-on-scroll="data-navbar-on-scroll">
             <div class="container"><a class="navbar-brand d-flex align-items-center fw-semi-bold fs-3"
-                    href={{ route('home') }}> <img class="me-3" src="{{ url('/images/logo-bem.png') }}" alt="logo"
-                        width="12%" /> BEM NURUL FIKRI</a>
+                    href={{ route('home') }}> <img class="me-3" src="{{ url('/images/logobem.png') }}" alt="logo"
+                        width="10%" /> BEM NURUL FIKRI</a>
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation"><span
