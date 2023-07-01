@@ -45,7 +45,7 @@
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" data-navbar-on-scroll="data-navbar-on-scroll">
             <div class="container"><a class="navbar-brand d-flex align-items-center fw-semi-bold fs-3"
                     href={{ route('home') }}> <img class="me-3" src="{{ url('/images/logobem.png') }}" alt="logo"
-                        width="10%" /> BEM NURUL FIKRI</a>
+                        width="10%" />EVENTHUB</a>
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation"><span
@@ -57,8 +57,8 @@
                                 href={{ route('home') }}>Home</a>
                         </li>
                         <li class="nav-item px-2">
-                            <a class="nav-link {{ url()->current() == route('event') ? 'active fw-medium ' : '' }}"
-                                href={{ url('event') }}>Events</a>
+                            <a class="nav-link {{ url()->current() == route('events') ? 'active fw-medium ' : '' }}"
+                                href={{ url('events') }}>Events</a>
                         </li>
                         <li class="nav-item px-2">
                             <a class="nav-link {{ url()->current() == route('our-service') ? 'active fw-medium ' : '' }}"
@@ -101,8 +101,9 @@
             <div class="container">
                 <div class="row align-items-center min-vh-md-75 mt-7">
                     <div class="col-md-7 col-lg-6 py-6 text-sm-start text-center">
-                        <h1 class="mt-6 mb-sm-4 display-4 fw-light lh-sm fs-4 fs-lg-6 fs-xxl-7">We Help to <span
-                                class="text-primary">Build</span><br class="d-block d-lg-none d-xl-block" />Your Dream
+                        <h1 class="mt-6 mb-sm-4 display-4 fw-light lh-sm fs-4 fs-lg-6 fs-xxl-7">Isi Waktu Luangmu <span
+                                class="text-primary">Dengan</span><br class="d-block d-lg-none d-xl-block" />Pengalaman
+                            Baru
                         </h1>
                         <p class="mb-5 fs-1 lh-lg">We are always availed to consult on taking your higher education to
                             the next level so you can stay competitive in the global world.</p><a
@@ -145,34 +146,6 @@
         </section>
 
         @yield('content')
-
-
-        <!-- ============================================-->
-        <!-- <section> begin ============================-->
-        <section class="py-6 bg-100">
-
-            <div class="container">
-                <div class="row flex-center">
-                    <div class="col-md-7 col-lg-6 offset-xl-1">
-                        <h1 class="fw-light text-center text-md-start fs-lg-3 fs-xl-4">Ready to chase your dreams?</h1>
-                    </div>
-                    <div class="col-md-4 text-center text-lg-end"> <a class="btn btn-lg btn-primary hover-top"
-                            href="#">Apply Online
-                            <svg class="bi bi-arrow-right-short ms-2" xmlns="http://www.w3.org/2000/svg"
-                                width="25" height="25" fill="currentColor" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z">
-                                </path>
-                            </svg></a></div>
-                </div>
-            </div><!-- end of .container-->
-
-        </section>
-        <!-- <section> close ============================-->
-        <!-- ============================================-->
-
-
-
 
         <!-- ============================================-->
         <!-- <section> begin ============================-->

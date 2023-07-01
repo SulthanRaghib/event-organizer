@@ -10,7 +10,8 @@ use Illuminate\Support\Facades\DB;
 class DatabaseSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Seed data with command
+     * php artisan db:seed
      */
     public function run(): void
     {

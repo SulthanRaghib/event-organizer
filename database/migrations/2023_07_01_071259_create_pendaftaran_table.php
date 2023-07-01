@@ -13,8 +13,14 @@ return new class extends Migration
     {
         Schema::create('pendaftaran', function (Blueprint $table) {
             $table->id('id_pendaftaran');
-            $table->foreignId('event_id')->constrained('event');
-            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('event_id')->constrained(
+                table: 'event',
+                column: 'id_event'
+            );
+            $table->foreignId('user_id')->constrained(
+                table: 'users',
+                column: 'id'
+            );
             $table->string('status_pendaftaran');
             $table->string('nama_kampus');
             $table->timestamps();

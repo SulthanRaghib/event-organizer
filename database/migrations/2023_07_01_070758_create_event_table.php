@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id('id_event');
             $table->string('judul_event');
             $table->string('pembicara');
+            $table->date('tanggal_dibuat');
             $table->date('tanggal_event');
             $table->time('jam_mulai');
             $table->time('jam_selesai');

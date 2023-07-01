@@ -22,6 +22,13 @@
 
     <link rel="icon" href={{ url('images/logobem.png') }} type="image/x-icon">
 
+    {{-- SWEET ALERT 2 --}}
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+    {{-- BOOTSTRAP 5 ICON --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
 </head>
 
 <body id="page-top">
@@ -46,7 +53,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item {{ url()->current() == route('dashboard') ? 'active' : '' }}">
                 <a class="nav-link" href={{ route('dashboard') }}>
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -60,22 +67,20 @@
                 Interface
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
+            <li class="nav-item {{ url()->current() == route('event') ? 'active' : '' }}">
+                <a class="nav-link" href={{ route('event') }}>
+                    <i class="bi bi-calendar-event"></i>
+                    <span>Event</span>
                 </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href={{ url('/role') }}>Role</a>
-                        <a class="collapse-item" href="cards.html">Cards</a>
-                    </div>
-                </div>
             </li>
 
+            <li class="nav-item {{ url()->current() == route('pendaftaran') ? 'active' : '' }}">
+                <a class="nav-link" href={{ route('pendaftaran') }}>
+                    <i class="bi bi-card-list"></i>
+                    <span>Pendaftaran</span>
+                </a>
+            </li>
+            {{--
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
@@ -128,7 +133,8 @@
             <li class="nav-item">
                 <a class="nav-link" href="charts.html">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
+                    <span>Charts</span>
+                </a>
             </li>
 
             <!-- Nav Item - Tables -->
@@ -136,7 +142,7 @@
                 <a class="nav-link" href={{ url('/tables') }}>
                     <i class="fas fa-fw fa-table"></i>
                     <span>Tables</span></a>
-            </li>
+            </li> --}}
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -146,14 +152,6 @@
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
-            <!-- Sidebar Message -->
-            <div class="sidebar-card d-none d-lg-flex">
-                <img class="sidebar-card-illustration mb-2" src={{ url('img/undraw_rocket.svg') }} alt="...">
-                <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components,
-                    and more!</p>
-                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to
-                    Pro!</a>
-            </div>
 
         </ul>
         <!-- End of Sidebar -->
@@ -254,66 +252,64 @@
                 </div>
                 <!-- /.container-fluid -->
 
-            </div>
-            <!-- End of Main Content -->
 
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                <!-- Footer -->
+                <footer class="sticky-footer bg-white">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Copyright &copy; Your Website 2021</span>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End of Footer -->
+
+            </div>
+            <!-- End of Content Wrapper -->
+
+        </div>
+        <!-- End of Page Wrapper -->
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+        <!-- Logout Modal-->
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <a class="btn btn-primary" href="login.html">Logout</a>
                     </div>
                 </div>
-            </footer>
-            <!-- End of Footer -->
-
-        </div>
-        <!-- End of Content Wrapper -->
-
-    </div>
-    <!-- End of Page Wrapper -->
-
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src={{ url('sbadmin/vendor/jquery/jquery.min.js') }}></script>
-    <script src={{ url('sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js') }}></script>
+        <!-- Bootstrap core JavaScript-->
+        <script src={{ url('sbadmin/vendor/jquery/jquery.min.js') }}></script>
+        <script src={{ url('sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js') }}></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src={{ url('sbadmin/js/jquery-easing/jquery.easing.min.js') }}></script>
+        <!-- Core plugin JavaScript-->
+        <script src={{ url('sbadmin/js/jquery-easing/jquery.easing.min.js') }}></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src={{ url('sbadmin/js/sb-admin-2.min.js') }}></script>
+        <!-- Custom scripts for all pages-->
+        <script src={{ url('sbadmin/js/sb-admin-2.min.js') }}></script>
 
-    <!-- Page level plugins -->
-    <script src={{ url('sbadmin/vendor/chart.js/Chart.min.js') }}></script>
+        <!-- Page level plugins -->
+        <script src={{ url('sbadmin/vendor/chart.js/Chart.min.js') }}></script>
 
-    <!-- Page level custom scripts -->
-    <script src={{ url('sbadmin/js/demo/chart-area-demo.js') }}></script>
-    <script src={{ url('sbadmin/js/demo/chart-pie-demo.js') }}></script>
+        <!-- Page level custom scripts -->
+        <script src={{ url('sbadmin/js/demo/chart-area-demo.js') }}></script>
+        <script src={{ url('sbadmin/js/demo/chart-pie-demo.js') }}></script>
 
 </body>
 
